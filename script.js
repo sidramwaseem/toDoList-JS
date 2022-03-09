@@ -23,6 +23,7 @@ for (var i = 0; i < close.length; i++) {
   };
 }
 
+
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("input").value;
@@ -30,13 +31,14 @@ function newElement() {
   var txt = document.createTextNode(inputValue);
   li.appendChild(txt);
 
-  if (inputValue === "") {
-    alert("Please enter a task!");
-  } else {
-    document.getElementById("tasks-list").appendChild(li);
-    li.classList.add("list-group-item", "task-item");
+  if(inputValue === ""){
+    alert("Please enter a task!")
   }
-
+  else{
+    document.getElementById("tasks-list").appendChild(li);
+li.classList.add("list-group-item", "task-item")
+  }
+ 
   document.getElementById("input").value = "";
 
   var span2 = document.createElement("span");
@@ -46,7 +48,7 @@ function newElement() {
   var close = document.getElementsByClassName("close");
 
   span2.appendChild(text2);
-  li.appendChild(span);
+  li.appendChild(span2);
 
   for (var i = 0; i < close.length; i++) {
     close[i].onclick = function () {
